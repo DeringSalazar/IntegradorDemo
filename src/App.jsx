@@ -1,6 +1,6 @@
 import React from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
-import Sidebar from './components/Sidebar.jsx';
+import Sidebar from './components/Sidebar';
 import Login from './components/login.jsx';
 import Inicio from './components/Inicio.jsx';
 import PreFormulario from './components/PreFormulario.jsx';
