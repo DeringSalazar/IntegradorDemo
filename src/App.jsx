@@ -2,7 +2,7 @@ import React from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
 import Sidebar from './components/sidebar.jsx';
 import Login from './components/login.jsx';
-import Inicio from './components/Inicio.jsx';
+import Inicio from './components/inicio.jsx';
 import PreFormulario from './components/PreFormulario.jsx';
 import RegistroSuministros from './components/RegistroSuministros.jsx';
 import AsignacionRecursos from './components/AsignacionRecursos.jsx';
