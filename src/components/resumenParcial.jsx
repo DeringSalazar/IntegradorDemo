@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react';
-import { AbastecimientoContext } from '../context/AbastecimientoContext';
+import { AbastecimientoContext } from '../context/abastecimientoContext';
 import { useNavigate } from 'react-router-dom';
 
 const ResumenParcial = () => {
