@@ -17,7 +17,7 @@ const Login = () => {
       setError("Por favor complete todos los campos");
       return;
     }
-
+    s
     try {
       authHelper.logout(); // Asegúrate de cerrar sesión antes de iniciar una nueva sesión
       await authHelper.login(usuario, contrasena); // Llama a la función de login
