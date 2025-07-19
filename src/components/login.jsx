@@ -5,7 +5,7 @@ import authHelper from '../helpers/sesion'; // Asegúrate de importar correctame
 import { Link } from 'react-router-dom';
 
 const Login = () => {
-  const [usuario, setUsuario] = useState('');
+  const [correo, setcorreo] = useState('');
   const [contrasena, setContrasena] = useState('');
   const [error, setError] = useState('');
   const navigate = useNavigate(); // Inicializa useNavigate
@@ -13,14 +13,14 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (!usuario || !contrasena) {
+    if (!correo || !contrasena) {
       setError("Por favor complete todos los campos");
       return;
     }
-    s
+    
     try {
       authHelper.logout(); // Asegúrate de cerrar sesión antes de iniciar una nueva sesión
-      await authHelper.login(usuario, contrasena); // Llama a la función de login
+      await authHelper.login(correo, contrasena); // Llama a la función de login
       setError(""); // Limpia el error si la autenticación es exitosa
 
       // Redirige a la página de inicio después de iniciar sesión
@@ -51,7 +51,7 @@ const Login = () => {
           id="usuario"
           name="usuario"
           placeholder="Ingrese su usuario o correo"
-          value={usuario}
+          value={correo}
           onChange={(e) => setUsuario(e.target.value)}
           required
         />
