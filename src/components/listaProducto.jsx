@@ -9,7 +9,7 @@ const ListaProducto = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    axios.get('https://apiintegrador-production-8ef8.up.railway.app/api/Productos/all')
+    axios.get('https://backendapi-production-bf1d.up.railway.app/api/Productos/all')
       .then(res => {
         const data = Array.isArray(res.data) ? res.data : res.data.data || [];
         setProductos(data);
@@ -29,7 +29,7 @@ const ListaProducto = () => {
 
   const actualizarProducto = async () => {
     try {
-      await axios.put(`https://apiintegrador-production-8ef8.up.railway.app/api/Productos/id/${form.id}`, form);
+      await axios.put(`https://backendapi-production-bf1d.up.railway.app/api/Productos/id/${form.id}`, form);
       alert("Producto actualizado con éxito.");
     } catch (error) {
       console.error("Error al actualizar:", error);
@@ -40,7 +40,7 @@ const ListaProducto = () => {
   const eliminarProducto = async () => {
     if (!window.confirm("¿Seguro que deseas eliminar este producto?")) return;
     try {
-      await axios.delete(`https://apiintegrador-production-8ef8.up.railway.app/api/Productos/id/${form.id}`);
+      await axios.delete(`https://backendapi-production-bf1d.up.railway.app/api/Productos/id/${form.id}`);
       alert("Producto eliminado con éxito.");
       window.location.reload();
     } catch (error) {

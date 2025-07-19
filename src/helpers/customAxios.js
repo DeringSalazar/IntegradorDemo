@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const BASE_URL = "https://apiintegrador-production-8ef8.up.railway.app/api";
+const BASE_URL = "https://backendapi-production-bf1d.up.railway.app/api";
 
 const customAxios = axios.create({
   baseURL: BASE_URL,

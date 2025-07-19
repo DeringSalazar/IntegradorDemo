@@ -31,10 +31,10 @@ const RegistroAlbergue = () => {
   };
 
   useEffect(() => {
-    llenarSelect('https://apiintegrador-production-8ef8.up.railway.app/api/Ubicaciones/all', setUbicaciones);
-    llenarSelect('https://apiintegrador-production-8ef8.up.railway.app/api/capacidadAlbergues/all', setCapacidades);
-    llenarSelect('https://apiintegrador-production-8ef8.up.railway.app/api/infraestructuraAlbergues/all', setInfraestructuras);
-    llenarSelect('https://apiintegrador-production-8ef8.up.railway.app/api/municipalidad/all', setMunicipalidades);
+    llenarSelect('https://backendapi-production-bf1d.up.railway.app/api/Ubicaciones/all', setUbicaciones);
+    llenarSelect('https://backendapi-production-bf1d.up.railway.app/api/capacidadAlbergues/all', setCapacidades);
+    llenarSelect('https://backendapi-production-bf1d.up.railway.app/api/infraestructuraAlbergues/all', setInfraestructuras);
+    llenarSelect('https://backendapi-production-bf1d.up.railway.app/api/municipalidad/all', setMunicipalidades);
   }, []);
 
   const handleProvinciaChange = (provincia) => {
@@ -72,7 +72,7 @@ const RegistroAlbergue = () => {
       color: "verde"
     };
 
-    axios.post("https://apiintegrador-production-8ef8.up.railway.app/api/albergues", payload)
+    axios.post("https://backendapi-production-bf1d.up.railway.app/api/albergues", payload)
       .then(() => {
         alert("Albergue registrado correctamente");
         setForm({});

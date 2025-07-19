@@ -20,7 +20,7 @@ const RegistroUsuario = () => {
   useEffect(() => {
     const fetchMunicipalidades = async () => {
       try {
-        const res = await customAxios.get('https://apiintegrador-production-8ef8.up.railway.app/api/municipalidad/all');
+        const res = await customAxios.get('https://backendapi-production-bf1d.up.railway.app/api/municipalidad/all');
         const data = Array.isArray(res.data) ? res.data
                   : res.data.municipalidades ?? res.data.data ?? [];
         setMunicipalidades(data || []);
@@ -56,7 +56,7 @@ const RegistroUsuario = () => {
     };
 
     try {
-      await customAxios.post("https://apiintegrador-production-8ef8.up.railway.app/api/usuarios", payload);
+      await customAxios.post("https://backendapi-production-bf1d.up.railway.app/api/usuarios", payload);
       alert("Usuario registrado correctamente.");
       setForm({
         nombre: '', correo: '', contrasena: '', numero: '',

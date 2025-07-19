@@ -33,7 +33,7 @@ const RegistrarProducto = () => {
         unidadMedida: form.unidad
       };
 
-      await axios.post("https://apiintegrador-production-8ef8.up.railway.app/api/Productos", data);
+      await axios.post("https://backendapi-production-bf1d.up.railway.app/api/Productos", data);
       alert("Producto registrado correctamente");
       setForm({
         codigo: '',
